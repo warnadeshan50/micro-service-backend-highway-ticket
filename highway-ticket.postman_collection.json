@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "51206704-53e7-4330-8e46-fcd5444a81d5",
+		"name": "highway-ticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28054300"
+	},
+	"item": [
+		{
+			"name": "user-service",
+			"item": [
+				{
+					"name": "user service ready to use",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user/okay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"okay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_first_name\":\"Kevin\",\r\n    \"user_last_name\":\"Gihantha\",\r\n    \"user_email\":\"Kevin@gmail.com\",\r\n    \"user_phone\":\"0712343443\",\r\n    \"user_address\":\"Wadduwa\",\r\n    \"user_password\":\"777777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user?user_id=1e616273-c57f-4c02-ae3a-3a22b5872fbd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1e616273-c57f-4c02-ae3a-3a22b5872fbd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user?user_id=9ae36f33-1453-48dc-9e40-ea1b78511eb4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "9ae36f33-1453-48dc-9e40-ea1b78511eb4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_first_name\":\"Warna\",\r\n    \"user_last_name\":\"Deshan\",\r\n    \"user_email\":\"warnadeshan@gmail.com\",\r\n    \"user_phone\":\"0762079221\",\r\n    \"user_address\":\"panadura\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user?user_id=bb0816c1-efe7-4f3d-a62a-4ec045cfe9f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "bb0816c1-efe7-4f3d-a62a-4ec045cfe9f2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle-service",
+			"item": [
+				{
+					"name": "vehicle service ready to use ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle/okay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"okay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save a vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_id\":\"CBB 8878\",\r\n    \"vehicle_model\":\"Honda fit\",\r\n    \"vehicle_owner\":\"Promod\",\r\n    \"vehicle_type\":\"car\",\r\n    \"user_id\":\"1e616273-c57f-4c02-ae3a-3a22b5872fbd\",\r\n    \"amount_of_passenger\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a vehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle?vehicle_id=ACC 3153",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "vehicle_id",
+									"value": "ACC 3153"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle?vehicle_id=ACC 3153",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "vehicle_id",
+									"value": "ACC 3153"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_id\":\"CBB 8878\",\r\n    \"vehicle_model\":\"Lambogini\",\r\n    \"vehicle_owner\":\"Promod\",\r\n    \"vehicle_type\":\"car\",\r\n    \"user_id\":\"1e616273-c57f-4c02-ae3a-3a22b5872fbd\",\r\n    \"amount_of_passengers\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicle?vehicle_id=CBB 8878",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "vehicle_id",
+									"value": "CBB 8878"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment-service",
+			"item": [
+				{
+					"name": "payment service ready to use",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/v1/payment/okay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"okay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exit ticket print",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exit_user_id\":\"ca6866f8-eb74-4830-a100-8062d3271743\",\r\n    \"exit_location\":\"Dodangoda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/v1/payment/update_ticket?ticket_id=30f86750-e83b-4678-aa5d-3e60e8441e9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"update_ticket"
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "30f86750-e83b-4678-aa5d-3e60e8441e9b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save a payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_id\":\"00001\",\r\n    \"payment_type\":\"bank\",\r\n    \"payment_amount\": 500.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/v1/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket-service",
+			"item": [
+				{
+					"name": "ticket service ready to use",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/v1/ticket/okay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"okay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save a entry ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entrance_user_id\":\"1e616273-c57f-4c02-ae3a-3a22b5872fbd\",\r\n    \"entrance_location\":\"Kaduwela\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/v1/ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/v1/ticket?ticket_id=30f86750-e83b-4678-aa5d-3e60e8441e9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"ticket"
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "30f86750-e83b-4678-aa5d-3e60e8441e9b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update last ticket",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exit_user_id\":\"ca6866f8-eb74-4830-a100-8062d3271743\",\r\n    \"exit_location\":\"Dodangoda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/v1/ticket/update_ticket?ticket_id=aa56bb85-5f05-451d-81a7-7c4bc5ecd244",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"update_ticket"
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "aa56bb85-5f05-451d-81a7-7c4bc5ecd244"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
